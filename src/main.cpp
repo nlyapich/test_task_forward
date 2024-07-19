@@ -38,7 +38,7 @@ int main()
 
   Engine* engine = new InternalCombustionEngine(momentInertia, torque, crankshaftSpeed, overheatingTemperature, H_m, H_v, C, T_out);
 
-  double modelTime = 1.0; // 'ускоренние' времени при симуляции, 1 реальная секунда равна 3600 секунд симуляции
+  double modelTime = 1.0; // 'ускоренние' времени при симуляции, 1 реальная секунда равна modelTime секунд симуляции
 
   TestEngine* test1 = new TestEngineTemperature(modelTime);
   map<string, double> result1 = test1->run(engine);
